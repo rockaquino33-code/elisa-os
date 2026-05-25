@@ -1,0 +1,147 @@
+/**
+ * @file desktop.css
+ * @description Estilos do desktop, ícones e wallpaper
+ * @author ELISA OS Team
+ * @version 1.0.0
+ */
+
+/* DESKTOP CONTAINER */
+.desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0a0e27 0%, #16213e 100%);
+    z-index: var(--z-desktop);
+    overflow: hidden;
+}
+
+/* WALLPAPER */
+.desktop-wallpaper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.05"/></pattern></defs><rect width="1920" height="1080" fill="%230a0e27"/><rect width="1920" height="1080" fill="url(%23grid)"/></svg>');
+    background-size: 100px 100px;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* DESKTOP ICONS CONTAINER */
+.desktop-icons {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    z-index: var(--z-desktop-icon);
+    padding: 20px;
+    max-width: 300px;
+}
+
+/* DESKTOP ICON */
+.desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: var(--border-radius-lg);
+    transition: all var(--transition-base);
+    user-select: none;
+}
+
+.desktop-icon:hover {
+    background: var(--glass-light);
+    transform: scale(1.08);
+    backdrop-filter: blur(10px);
+}
+
+.desktop-icon:active {
+    transform: scale(0.95);
+}
+
+/* DESKTOP ICON IMAGE */
+.desktop-icon-image {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* DESKTOP ICON LABEL */
+.desktop-icon-label {
+    font-size: 12px;
+    text-align: center;
+    color: var(--light-text);
+    line-height: 1.2;
+    word-break: break-word;
+    max-width: 90px;
+}
+
+/* OS CONTAINER */
+.os-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--dark-bg);
+}
+
+/* RESPONSIVO - TABLET */
+@media (max-width: 768px) {
+    .desktop-icons {
+        top: 10px;
+        left: 10px;
+        gap: 15px;
+        padding: 10px;
+        max-width: 100%;
+    }
+    
+    .desktop-icon {
+        padding: 8px;
+    }
+    
+    .desktop-icon-image {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 4px;
+    }
+    
+    .desktop-icon-label {
+        font-size: 10px;
+        max-width: 80px;
+    }
+}
+
+/* RESPONSIVO - MOBILE */
+@media (max-width: 640px) {
+    .desktop-icons {
+        top: 5px;
+        left: 5px;
+        gap: 10px;
+        padding: 5px;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+    
+    .desktop-icon {
+        padding: 6px;
+    }
+    
+    .desktop-icon-image {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 2px;
+    }
+    
+    .desktop-icon-label {
+        font-size: 9px;
+        max-width: 70px;
+    }
+}
