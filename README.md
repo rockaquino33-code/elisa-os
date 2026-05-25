@@ -1,58 +1,100 @@
-# 🌟 ELISA OS - A Futuristic Cloud Desktop Platform
+# 🚀 ELISA OS - Modular Operating System Interface
 
-> Uma plataforma cloud desktop futurista, estilo sistema operacional web com IA integrada, interface gamer premium e design cinematográfico.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Enabled-brightgreen)](https://rockaquino33-code.github.io/elisa-os)
+[![Modular Architecture](https://img.shields.io/badge/Architecture-Modular-blue)]()
+
+**ELISA OS** é um sistema operacional web com arquitetura modular, responsiva e futurista. Desenvolvido para ser escalável e compatível com múltiplas variações (Gamer, Business, Studio, Medical).
+
+## 📋 Índice
+
+- [Visão Geral](#visão-geral)
+- [Arquitetura](#arquitetura)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Recursos Principais](#recursos-principais)
+- [Instalação e Setup](#instalação-e-setup)
 
 ## 🎯 Visão Geral
 
-ELISA OS é uma plataforma SaaS moderna que combina:
-- **Dashboard inteligente** com IA integrada
-- **Desktop web futurista** com janelas arrastáveis
-- **Cloud apps** profissionais
-- **Painel administrativo** avançado
-- **Sistema modular** escalável
-- **Interface gamer premium** com RGB effects
+ELISA OS é uma interface de sistema operacional web-based que simula um SO desktop com funcionalidades modernas:
 
-## 🎨 Design Visual
+- ✨ **Design Glassmorphism**: Interface com efeito vidro fosco futurista
+- 📱 **Responsivo**: Adaptado para desktop, tablet e mobile (iOS/Android)
+- 🧩 **Modular**: Arquitetura baseada em componentes reutilizáveis
+- ⚡ **Performance**: Otimizado para GitHub Pages e ambientes estáticos
+- 🎨 **Temas**: Sistema de temas preparado para múltiplas variações
+- 🔌 **API-Ready**: Estrutura preparada para integração com APIs futuras
 
-**Inspiração:** Windows 11 + macOS + Xbox Dashboard + Cyberpunk UI
+## 🏗️ Arquitetura
 
-**Paleta de Cores:**
-- Roxo Neon: `#A855F7`
-- Azul Elétrico: `#0EA5E9`
-- Preto Fosco: `#0F172A`
-- Branco Clean: `#F8FAFC`
-- Cinza Profundo: `#1E293B`
+```
+ELISA OS
+├── Core System (kernel, ui, themes)
+├── Desktop Manager
+├── Window Manager
+├── Dock & Taskbar
+├── App Modules (Browser, Assistant, Explorer, Xbox, Settings)
+└── Widget System
+```
 
-## 📋 Estrutura
+## 📁 Estrutura do Projeto
 
 ```
 elisa-os/
-├── frontend/                # React + Next.js
-├── backend/                 # Node.js + Express
-├── infra/                   # Docker & NGINX
-├── docs/                    # Documentação
-├── docker-compose.yml       # Orquestração
-└── package.json             # Root config
+├── index.html
+├── styles/
+│   ├── main.css
+│   ├── desktop.css
+│   ├── windows.css
+│   ├── dock.css
+│   └── widgets.css
+├── scripts/
+│   ├── system.js
+│   ├── desktop.js
+│   ├── windows.js
+│   ├── dock.js
+│   └── apps.js
+├── assets/
+├── apps/
+├── system/
+└── docs/
 ```
 
-## 🚀 Quick Start
+## ✨ Recursos Principais
+
+### 1. Desktop Modular
+- Gerenciamento dinâmico de ícones
+- Sistema de eventos
+- Wallpaper adaptável
+
+### 2. Sistema de Janelas
+- Janelas flutuantes
+- Minimizar, maximizar, fechar
+- Redimensionamento
+
+### 3. Dock Funcional
+- Apps fixas e dinâmicas
+- Efeito hover com zoom
+- Indicador de janelas abertas
+
+### 4. Aplicações Integradas
+- Browser
+- Assistant
+- Explorer
+- Xbox
+- Settings
+
+## 🚀 Instalação e Setup
 
 ```bash
-cp .env.example .env
-docker-compose up -d
+git clone https://github.com/rockaquino33-code/elisa-os.git
+cd elisa-os
+git checkout modular-architecture
+python -m http.server 8000
 ```
 
-**Acesse:**
-- Frontend: http://localhost:3000
-- Backend: http://localhost:5000
-- NGINX: http://localhost
+Acesse: http://localhost:8000
 
-## 📚 Documentação
+## 📄 Licença
 
-- [Setup Guide](./docs/SETUP.md)
-- [Frontend Guide](./docs/FRONTEND.md)
-- [Backend Guide](./docs/BACKEND.md)
-
----
-
-**Made with 💜 by Rockaquino Code** - *The future of cloud computing starts here.* 🚀
+MIT License
